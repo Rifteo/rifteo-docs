@@ -12,11 +12,7 @@
     "pages": [
       {
         "group": "Getting Started",
-        "pages": [
-          "welcome",
-          "your-role",
-          "glossary"
-        ]
+        "pages": ["welcome", "your-role", "glossary"]
       },
       {
         "group": "Your Audit Results",
@@ -29,24 +25,15 @@
       },
       {
         "group": "Attack Surface Management",
-        "pages": [
-          "what-is-asm",
-          "activating-scans",
-          "scheduling-results"
-        ]
+        "pages": ["what-is-asm", "activating-scans", "scheduling-results"]
       },
       {
         "group": "Teo AI",
-        "pages": [
-          "teo-recommendations"
-        ]
+        "pages": ["teo-recommendations"]
       },
       {
         "group": "Reports",
-        "pages": [
-          "generating-reports",
-          "asm-reports"
-        ]
+        "pages": ["generating-reports", "asm-reports"]
       },
       {
         "group": "Your Account",
@@ -59,41 +46,21 @@
       },
       {
         "group": "What's New",
-        "pages": [
-          "changelog"
-        ]
+        "pages": ["changelog"]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    ]
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@rifteo.app"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://app.rifteo.app"
     }
   },
   "contextual": {
@@ -111,11 +78,8 @@
   "feedback": {
     "thumbsRating": true
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
+  "search": {
+    "prompt": "Search..."
+  },
+  "footer": {}
 }
