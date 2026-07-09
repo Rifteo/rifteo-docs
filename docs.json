@@ -12,11 +12,7 @@
     "pages": [
       {
         "group": "Getting Started",
-        "pages": [
-          "welcome",
-          "your-role",
-          "glossary"
-        ]
+        "pages": ["welcome", "your-role", "glossary"]
       },
       {
         "group": "Your Audit Results",
@@ -29,24 +25,15 @@
       },
       {
         "group": "Attack Surface Management",
-        "pages": [
-          "what-is-asm",
-          "activating-scans",
-          "scheduling-results"
-        ]
+        "pages": ["what-is-asm", "activating-scans", "scheduling-results"]
       },
       {
         "group": "Teo AI",
-        "pages": [
-          "teo-recommendations"
-        ]
+        "pages": ["teo-recommendations"]
       },
       {
         "group": "Reports",
-        "pages": [
-          "generating-reports",
-          "asm-reports"
-        ]
+        "pages": ["generating-reports", "asm-reports"]
       },
       {
         "group": "Your Account",
@@ -59,9 +46,7 @@
       },
       {
         "group": "What's New",
-        "pages": [
-          "changelog"
-        ]
+        "pages": ["changelog"]
       }
     ]
   },
