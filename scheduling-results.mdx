@@ -1,6 +1,29 @@
 ﻿---
-title: "Scheduling Results"
-description: "Documentation for Scheduling Results"
+title: "Scheduling & Viewing Results"
+description: "How to schedule ASM scans and how to view scan history, severity trends, and discovered assets."
 ---
 
-# Scheduling & Results
+## Scheduling
+
+Once ASM is activated, you can choose how your scans run:
+
+- **One-shot** — runs a single scan on demand. Good for a one-time check of your current attack surface.
+- **Recurring** — runs automatically on a set schedule (e.g. weekly or monthly), so your attack surface is continuously monitored without needing to trigger scans manually.
+
+<Note>
+This scheduling controls individual scan *runs* within your ASM audit — not the audit itself (see [Activating ASM](/activating-scans) for that). Only one scan run can be in progress at a time per organisation: if a scan is already running, the next one (whether one-shot or recurring) won't start until it finishes. This no-overlap guard prevents duplicate or conflicting scans from running simultaneously.
+</Note>
+
+You can switch between one-shot and recurring at any time from the Attack Surface Management section of your dashboard.
+
+## Viewing Results
+
+Once your ASM audit has run at least once, you'll have access to:
+
+**Scan history** — a timeline of every scan that's been run, including when it started, its status, and a summary of what it found. This lets you see how your attack surface has changed over time, not just its current state.
+
+**Severity graph** — a visual breakdown of findings by severity (Critical, High, Medium, Low, Info) across your scan history, so you can quickly see whether your overall risk is trending up or down.
+
+**Discovered assets** — the full list of assets ASM has found tied to your organisation, including ones that may be new since your last scan. Each asset shows when it was first discovered and its current status.
+
+All of this is available to both Organisation Admins and Organisation Members with dashboard access.

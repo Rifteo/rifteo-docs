@@ -1,6 +1,34 @@
 ﻿---
-title: "What Is Asm"
-description: "Documentation for What Is Asm"
+title: "What is Attack Surface Management?"
+description: "An overview of Attack Surface Management (ASM), why it matters, and how it compares to a Pentest."
 ---
 
-# What is ASM ?
+## What is Attack Surface Management?
+
+Attack Surface Management (ASM) is an ongoing way of finding, tracking, and monitoring everything about your organisation that's visible and reachable from the outside — your websites, servers, subdomains, and other externally exposed systems.
+
+Unlike a one-time audit, ASM isn't a single snapshot. It continuously discovers new assets as they appear (including ones you may not know about, like an old subdomain or a forgotten test server) and keeps monitoring them over time, so you always know what's exposed rather than finding out only when something goes wrong.
+
+This matters because your attack surface changes constantly — new services get spun up, old ones get forgotten, and each one is a potential way in for an attacker. ASM gives you continuous visibility instead of a single point-in-time check.
+
+## Scan Variants
+
+ASM offers three scan variants, each with a different depth of scanning:
+
+| Variant | Depth |
+|---------|-------|
+| **ASM Soft** | A lighter, faster scan that covers the basics of asset discovery and surface-level checks. Good for frequent, low-overhead monitoring. |
+| **ASM Medium** | A more thorough scan that goes deeper into discovered assets, balancing depth and scan time. |
+| **ASM Full** | The most comprehensive scan available, digging deepest into every discovered asset. Takes longer to run but surfaces the most detail. |
+
+## How ASM differs from a Pentest
+
+| | ASM | Pentest |
+|---|-----|---------|
+| **Scope** | Discovers your attack surface automatically — no need to declare specific targets in advance. | Requires declared targets: specific systems or applications agreed on beforehand. |
+| **Rules of Engagement** | Automatically defined based on what's discovered — no manual ROE negotiation needed. | Manually agreed upon between your organisation and the testing team before testing begins. |
+| **Starting point** | Starts from a client seed (like your domain), then expands outward as new assets are discovered. | Starts from a fixed, pre-agreed list of targets. |
+| **Nature** | Continuous and ongoing. | A defined, time-boxed engagement. |
+| **Best for** | Ongoing visibility into what's exposed. | In-depth testing of a specific system or application. |
+
+If you're not sure which is right for your organisation, your Rifteo contact can help you decide — many organisations use both, with ASM for continuous monitoring and Pentests for deeper, targeted testing.

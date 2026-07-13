@@ -1,6 +1,34 @@
 ﻿---
-title: "Activating Scans"
-description: "Documentation for Activating Scans"
+title: "Activating ASM"
+description: "How Organisation Admins activate Attack Surface Management for their organisation."
 ---
 
-# Activating Scans
+## Activating ASM
+
+Attack Surface Management is activated per organisation by an Organisation Admin. Each organisation can have **one active ASM audit at a time**.
+
+<Steps>
+  <Step title="Go to Attack Surface Management">
+    From your dashboard, navigate to the **Attack Surface Management** section in the sidebar.
+  </Step>
+  <Step title="Start activation">
+    Click **Activate ASM**. If your organisation already has an active ASM audit, you'll see its current status here instead of the activation option.
+  </Step>
+  <Step title="Provide your seed">
+    Enter your organisation's starting point for discovery — typically your primary domain. This is used as the seed Rifteo expands outward from to discover related assets.
+  </Step>
+  <Step title="Choose your scan variant">
+    Select **ASM Soft**, **ASM Medium**, or **ASM Full**, depending on the depth of scanning you need. You can change this later if your needs change.
+  </Step>
+  <Step title="Confirm and activate">
+    Review your selections and confirm. Your ASM audit will move to **Planned** and begin discovery shortly after.
+  </Step>
+</Steps>
+
+<Note>
+Your ASM audit is the overall program you're activating here — it stays active on an ongoing basis once set up. Only one ASM audit can be active per organisation at a time, so if you need to change your scan variant or seed later, you'll update your existing ASM audit rather than activate a new one.
+
+This is different from an individual scan *run* (a single execution within your ASM audit) — see [Scheduling & Viewing Results](/scheduling-results) for how those are limited to one at a time.
+</Note>
+
+Once activated, you can track progress and view results from the same **Attack Surface Management** section — see [Scheduling & Viewing Results](/scheduling-results) for what happens next.
