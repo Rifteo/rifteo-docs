@@ -1,34 +1,58 @@
 ﻿---
 title: "What is Attack Surface Management?"
-description: "An overview of Attack Surface Management (ASM), why it matters, and how it compares to a Pentest."
+description: "Understand what ASM is, why it matters, and how it differs from a traditional Pentest."
 ---
 
-## What is Attack Surface Management?
+## Overview
 
-Attack Surface Management (ASM) is an ongoing way of finding, tracking, and monitoring everything about your organisation that's visible and reachable from the outside — your websites, servers, subdomains, and other externally exposed systems.
+Attack Surface Management (ASM) is a way to continuously discover and monitor everything your organisation exposes to the internet — websites, servers, APIs, subdomains — without you having to manually list every system first.
 
-Unlike a one-time audit, ASM isn't a single snapshot. It continuously discovers new assets as they appear (including ones you may not know about, like an old subdomain or a forgotten test server) and keeps monitoring them over time, so you always know what's exposed rather than finding out only when something goes wrong.
+Unlike a traditional audit, where you tell Rifteo exactly what to test, ASM starts from what's publicly visible about your organisation and builds the list of assets for you.
 
-This matters because your attack surface changes constantly — new services get spun up, old ones get forgotten, and each one is a potential way in for an attacker. ASM gives you continuous visibility instead of a single point-in-time check.
+## Why It Matters
 
-## Scan Variants
+Most organisations have more exposed on the internet than they realise — forgotten subdomains, staging environments left open, or services spun up by a different team. Each of these is a potential entry point for an attacker.
 
-ASM offers three scan variants, each with a different depth of scanning:
+ASM gives you:
 
-| Variant | Depth |
-|---------|-------|
-| **ASM Soft** | A lighter, faster scan that covers the basics of asset discovery and surface-level checks. Good for frequent, low-overhead monitoring. |
-| **ASM Medium** | A more thorough scan that goes deeper into discovered assets, balancing depth and scan time. |
-| **ASM Full** | The most comprehensive scan available, digging deepest into every discovered asset. Takes longer to run but surfaces the most detail. |
+- **Continuous visibility** — instead of a one-time snapshot, you get an ongoing view of what's exposed.
+- **No manual asset list required** — Rifteo discovers assets for you, based on your organisation's public footprint.
+- **Early warning** — new or changed exposure is flagged as soon as it's discovered.
 
-## How ASM differs from a Pentest
+## How It Works
 
-| | ASM | Pentest |
-|---|-----|---------|
-| **Scope** | Discovers your attack surface automatically — no need to declare specific targets in advance. | Requires declared targets: specific systems or applications agreed on beforehand. |
-| **Rules of Engagement** | Automatically defined based on what's discovered — no manual ROE negotiation needed. | Manually agreed upon between your organisation and the testing team before testing begins. |
-| **Starting point** | Starts from a client seed (like your domain), then expands outward as new assets are discovered. | Starts from a fixed, pre-agreed list of targets. |
-| **Nature** | Continuous and ongoing. | A defined, time-boxed engagement. |
-| **Best for** | Ongoing visibility into what's exposed. | In-depth testing of a specific system or application. |
+<Frame>
+  <img src="/images/asm-overview.png" alt="Rifteo Attack Surface Management overview" />
+</Frame>
 
-If you're not sure which is right for your organisation, your Rifteo contact can help you decide — many organisations use both, with ASM for continuous monitoring and Pentests for deeper, targeted testing.
+You give Rifteo a starting point — typically your company's main domain. From there, Rifteo automatically maps out what's publicly reachable and exposed to the internet, and runs the right checks for what it finds — a web app gets tested differently than a mail server, for example, all without you having to configure anything.
+
+```mermaid
+flowchart LR
+    A[Your Domain] --> B[Discovery]
+    B --> C[Automatic Testing]
+    C --> D[Scan Results]
+```
+
+- **Your domain** — the starting point Rifteo uses to begin discovery.
+- **Discovery** — Rifteo maps out what's publicly reachable from there.
+- **Automatic testing** — the right checks are applied depending on what's discovered (a web app, an API, a mail server...).
+- **Scan results** — everything discovered and tested is compiled into your results view.
+
+## How ASM Differs from a Pentest
+
+| | **ASM** | **Pentest** |
+|---|---|---|
+| **Targets** | No targets declared upfront — discovered automatically from your domain | You declare specific targets (assets) before testing starts |
+| **Rules of Engagement** | Applied automatically, based on what's discovered | Defined manually by you (forbidden actions, feared events, protections in place) |
+| **Starting point** | Your domain | A defined scope you set up step by step |
+| **Best for** | Ongoing visibility across everything you expose | A deep, hands-on test of one specific system |
+| **Category** | Attack Surface Assessment | Penetration Test |
+
+<Note>
+ASM doesn't replace a Pentest — the two are complementary. ASM tells you what's exposed and worth a closer look; a Pentest goes deep on a specific target you've chosen.
+</Note>
+
+## Next Steps
+
+ASM is set up by the Rifteo team — see [Scan Variants](/scan-variants) to understand the different scan depths available.

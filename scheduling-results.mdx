@@ -1,29 +1,45 @@
 ﻿---
-title: "Scheduling & Viewing Results"
-description: "How to schedule ASM scans and how to view scan history, severity trends, and discovered assets."
+title: "Scheduling & Results"
+description: "One-shot vs recurring ASM scans, the no-overlap guard, and how to read your scan results."
 ---
+
+Not sure what ASM is yet? See [What is Attack Surface Management?](/what-is-asm) or [Scan Variants](/scan-variants) first.
 
 ## Scheduling
 
-Once ASM is activated, you can choose how your scans run:
+ASM scans can run in two ways:
 
-- **One-shot** — runs a single scan on demand. Good for a one-time check of your current attack surface.
-- **Recurring** — runs automatically on a set schedule (e.g. weekly or monthly), so your attack surface is continuously monitored without needing to trigger scans manually.
+- **One-shot** — runs once, on demand. Good for a single point-in-time check.
+- **Recurring** — runs automatically on a set interval, so exposure is monitored continuously without you having to relaunch it manually.
 
 <Note>
-This scheduling controls individual scan *runs* within your ASM audit — not the audit itself (see [Activating ASM](/activating-scans) for that). Only one scan run can be in progress at a time per organisation: if a scan is already running, the next one (whether one-shot or recurring) won't start until it finishes. This no-overlap guard prevents duplicate or conflicting scans from running simultaneously.
+There's a no-overlap guard on recurring scans: if a scan is still running when the next one is due to start, the next run is held until the current one finishes. This prevents two scans from running against the same client at once.
 </Note>
-
-You can switch between one-shot and recurring at any time from the Attack Surface Management section of your dashboard.
 
 ## Viewing Results
 
-Once your ASM audit has run at least once, you'll have access to:
+<Frame>
+  <img src="/images/asm-results.png" alt="Rifteo ASM results view" />
+</Frame>
 
-**Scan history** — a timeline of every scan that's been run, including when it started, its status, and a summary of what it found. This lets you see how your attack surface has changed over time, not just its current state.
+Once a scan completes (or while a recurring scan builds up history), you'll see:
 
-**Severity graph** — a visual breakdown of findings by severity (Critical, High, Medium, Low, Info) across your scan history, so you can quickly see whether your overall risk is trending up or down.
+- **Scan history** — a list of past runs, so you can track how exposure has changed over time.
+- **Severity graph** — a visual breakdown of findings by severity, to help you spot trends at a glance.
+- **Discovered assets** — the full list of assets ASM has found for this client, updated as new ones are discovered.
 
-**Discovered assets** — the full list of assets ASM has found tied to your organisation, including ones that may be new since your last scan. Each asset shows when it was first discovered and its current status.
+<Steps>
+  <Step title="Open your ASM section">
+    Go back to your **ASM** page.
+  </Step>
+  <Step title="Select a scan run">
+    Choose a run from the scan history to see its details.
+  </Step>
+  <Step title="Review findings">
+    Check the severity graph for an overview, then drill into discovered assets for specifics.
+  </Step>
+</Steps>
 
-All of this is available to both Organisation Admins and Organisation Members with dashboard access.
+<Note>
+Not sure about a finding or a discovered asset? Reach out to [support](/contact-support).
+</Note>
