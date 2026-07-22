@@ -1,0 +1,192 @@
+---
+title: "Starting an Audit"
+description: "How to launch your first audit in Rifteo."
+---
+
+Rifteo offers two ways to create an audit. Pick the one that fits you:
+
+<Tabs>
+  <Tab title="Start an audit (recommended for new clients)">
+    Walks you through every step — including Target and Scope — in one go, so nothing is left incomplete. Best if this is your first audit with Rifteo, as it helps you understand the platform along the way.
+  </Tab>
+  <Tab title="New Audit (for returning clients)">
+    A quicker, single-page form. Best if you've already worked with Rifteo before — note that fields like Scope and Assets stay empty until you fill them in later.
+  </Tab>
+</Tabs>
+
+<Frame>
+  <img src="/images/audit-entry-points.png" alt="Where to find Start an audit and New Audit in Rifteo" />
+</Frame>
+
+<Tabs>
+  <Tab title="Start an audit">
+
+## Step 1 — Get Started
+
+<Steps>
+  <Step title="Click Start an Audit">
+    From your dashboard, click **Start an Audit** to open the setup wizard.
+  </Step>
+  <Step title="Give your audit a name">
+    e.g. "Q4 Web App Security Audit".
+  </Step>
+  <Step title="Choose your Audit Type">
+    - **Penetration Test** — experts actively try to break in.
+    - **Vulnerability Assessment** — automated scan, no active exploitation.
+  </Step>
+  <Step title="Choose your Disclosure Policy">
+    How much access you give the audit team:
+    - **Black Box** — no prior information.
+    - **Gray Box** — partial access. *Most common choice.*
+    - **White Box** — full access (source code, credentials).
+  </Step>
+  <Step title="Choose your Target Type">
+    - **Web Application** — a website or platform.
+    - **API** — the system connecting apps/services behind the scenes.
+    - **Mobile (iOS/Android)**
+    - **Cloud Infrastructure** — hosted on AWS, Azure, Google Cloud, etc.
+    - **On-Premise Infrastructure** — hosted on your own servers.
+  </Step>
+  <Step title="Set your Audit Date">
+    Select the date range during which the audit will take place.
+  </Step>
+  <Step title="Set your Auditing Time Window">
+    Specify the hours during which testing is allowed to actively take place.
+  </Step>
+  <Step title="Add your Emergency Contact Details">
+    - **Technical issues** — someone reachable if the audit team hits a technical problem.
+    - **Security issues** — someone to notify immediately if a critical vulnerability is found.
+  </Step>
+</Steps>
+
+## Step 2 — Target
+
+Define the assets you want tested.
+
+<Steps>
+  <Step title="Add an Asset">
+    Create a new Asset, or select an existing one from your account.
+  </Step>
+  <Step title="Fill in the Asset details">
+    - **Type** — e.g. Web.
+    - **Name** — a descriptive name for this asset.
+    - **Environment** — Production, Pre-production, Staging, or Development.
+    - **Endpoint** — the URL or address to be tested.
+    - **Port**
+    - **Description** — a short summary of what this asset does.
+    - **Core Functionality** — list its main features, to help scope the audit.
+  </Step>
+  <Step title="Fill in Advanced Settings (optional)">
+    - **Source Code URL** — if you want the audit team to review the codebase.
+    - **Complexity Level** — Basic, Normal, or Complex.
+    - **Criticality** — how important this asset is, from Weak to Critical.
+    - **Handled or Manipulated Data** — the types of data this asset stores or processes (e.g. Personal Data, Payment Data, Medical Data). Select all that apply, or add your own.
+    - **Hosting Country** — where the asset is hosted.
+    - **Third Party Hosting** — whether the asset is hosted by an external provider.
+    - **Operating System** — e.g. Linux or Windows.
+  </Step>
+  <Step title="Add Test Accounts (optional)">
+    Provide test accounts with appropriate roles for this asset — include the **Role**, **Auth Type** (Basic, Bearer, OAuth, API Key, or Other), and **Details**. You can edit these anytime later.
+  </Step>
+  <Step title="Set Security Requirements">
+    Rate each from Low to High to help us prioritize:
+    - **Confidentiality** — how sensitive the data is.
+    - **Integrity** — how important it is that data isn't altered.
+    - **Availability** — how critical it is that the asset stays online.
+    - **Traceability** — how important it is to track who did what.
+  </Step>
+  <Step title="Add Documents (optional)">
+    Upload any relevant documentation for this asset.
+  </Step>
+</Steps>
+
+## Step 3 — Scope
+
+Set the rules of engagement so testing stays safe and compliant.
+
+<Steps>
+  <Step title="Select your Active Protections">
+    Check any security measures already in place: **WAF** (Web Application Firewall), **DDoS protection**, **IPS/IDS** (Intrusion Prevention/Detection System), **Rate limiting**, **Cloud provider security controls**, or **Other**.
+  </Step>
+  <Step title="Select Forbidden Actions">
+    Choose anything strictly off-limits during testing — e.g. Physical intrusion, Phishing, Social engineering, Denial of Service, Privilege escalation, or specific exploitation types. Leave unchecked anything you're comfortable allowing.
+  </Step>
+  <Step title="Select your Feared Events">
+    What worries you most? e.g. Data breach, Service downtime, Unauthorized access, Ransomware, Fraudulent transactions, or Other.
+  </Step>
+  <Step title="Add Additional Information (optional)">
+    Anything else the audit team should know.
+  </Step>
+</Steps>
+
+## Step 4 — Review
+
+Check everything before confirming:
+
+<Steps>
+  <Step title="Review your General Information, Target, and Scope">
+    Use **Edit** next to any section to make changes.
+  </Step>
+  <Step title="Confirm the three checkboxes">
+    - **NDA signed** — confidentiality agreement covering the audit.
+    - **Pentest Authorization signed** — your formal approval for Rifteo to test the defined assets.
+    - **Backups checked and up to date** — to prevent data loss during testing.
+  </Step>
+</Steps>
+
+## Step 5 — Finish
+
+Your audit is now planned! You'll see a confirmation screen, and you can download a summary of your setup for your records. Rifteo will be in touch shortly with next steps.
+
+  </Tab>
+  <Tab title="New Audit">
+
+<Frame>
+  <img src="/images/new-audit-form.png" alt="Rifteo Create Audit form" />
+</Frame>
+
+<Steps>
+  <Step title="Click New Audit">
+    From the **Audits** page, click **New Audit**.
+  </Step>
+  <Step title="Fill in Audit Information">
+    - **Audit Name** — a descriptive name for this audit.
+    - **Description** — a short summary of what this audit covers.
+    - **Category** — Penetration Test or Vulnerability Assessment.
+  </Step>
+  <Step title="Set Scheduling">
+    - **Recurring Audit** — turn this on to automatically schedule multiple audits at once.
+    - **Audit Period** — the date range for this audit.
+    - **Time Window** — the hours during which testing is allowed to take place.
+  </Step>
+  <Step title="Set Rules of Engagement">
+    - **Audit Methodology** — Gray Box, Black Box, or White Box, defining how much access and information testers receive.
+    - **Backup Availability** — whether a recent backup of the system is available for restoration.
+    - **Feared Events** — the threats that would impact you most (e.g. data breach, service downtime).
+    - **Forbidden Tests** — any testing actions that are off-limits.
+    - **Security Protections** — any protections already in place (e.g. WAF, IPS/IDS).
+    - **Alert Frequency** — how often you want to be notified during testing.
+    - **Technical Contact** and **Security Contact** — who to reach for technical issues or critical findings.
+  </Step>
+  <Step title="Set Security Requirements">
+    Rate each from Low to High to help us prioritize:
+    - **Confidentiality** — how sensitive the data is.
+    - **Integrity** — how important it is that data isn't altered.
+    - **Availability** — how critical it is that the asset stays online.
+    - **Traceability** — how important it is to track who did what.
+  </Step>
+  <Step title="Create the audit">
+    Once submitted, your audit is created — but Scope and Assets details will still be empty. Fill these in from the audit's page whenever you're ready.
+  </Step>
+</Steps>
+
+  </Tab>
+</Tabs>
+
+<Note>
+Not sure about a field? Reach out to [support](/contact-support).
+</Note>
+
+## What happens next
+
+Your audit moves through **Planned → In Progress → In Review → Completed**. See [Understanding Your Audit Results](/understanding-your-audit-results) for details.
