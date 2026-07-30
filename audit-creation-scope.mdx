@@ -40,6 +40,35 @@ Here's what happens when you create a new audit:
 
 The scope answers two questions: what will be tested, and what rules must the testing team follow?
 
+## How It's Carried Out
+
+Once your scope is confirmed, testing follows an internationally recognized methodology called **PTES** (Penetration Testing Execution Standard). It breaks the work into seven phases, so you always know where your audit stands.
+
+```mermaid
+flowchart LR
+    A[Pre-Engagement] --> B[Intelligence Gathering]
+    B --> C[Threat Modeling]
+    C --> D[Vulnerability Analysis]
+    D --> E[Exploitation]
+    E --> F[Post-Exploitation]
+    F --> G[Reporting]
+```
+
+Here's how these phases line up with the audit status you'll see on your dashboard:
+
+| PTES Phase | What Happens | Status You'll See |
+|---|---|---|
+| 1. Pre-Engagement | Your scope and rules of engagement are confirmed | `PLANNED` |
+| 2. Intelligence Gathering | The team researches your systems | `IN_PROGRESS` |
+| 3. Threat Modeling | The team maps out likely attack paths | `IN_PROGRESS` |
+| 4. Vulnerability Analysis | The team searches for weaknesses | `IN_PROGRESS` |
+| 5. Exploitation | The team attempts to exploit the weaknesses found | `IN_PROGRESS` |
+| 6. Post-Exploitation | The team assesses the real-world impact of what they found | `IN_PROGRESS` |
+| 7. Reporting | Findings are written up and reviewed before being shared with you | `IN_REVIEW` → `COMPLETED` |
+
+You don't need to take any action during these phases — the status on your dashboard keeps you informed, and you'll be notified when your results are ready to review.
+
+
 ### What will be tested (your targets)
 
 A target is simply a system you want tested — your website, an app, a server, etc. For each one, you'll be asked a few simple questions:
