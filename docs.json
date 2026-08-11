@@ -19,12 +19,14 @@
         "pages": ["welcome", "your-role", "glossary"]
       },
       {
-        "group": "Your Audit Results",
+        "group": "Running an Audit",
         "pages": [
+          "starting-an-audit",
+          "audit-creation-scope",
           "results",
           "findings-dashboard", 
-          "asset-inventory",
-          "responding-to-findings"
+          "asset-inventory"
+          
         ]
       },
       {
