@@ -1,6 +1,112 @@
 ﻿---
-title: "Generating Reports"
-description: "Documentation for Generating Reports"
+title: "Understanding Your Audit Reports"
+description: "What Rifteo reports contain, how they're generated, and how ASM reports differ from audit reports."
 ---
 
-# Generating Reports
+Once your audit is complete, Rifteo generates a detailed report summarizing everything your audit team found. This page explains what's in that report and how to find it.
+
+## Report Types
+
+The type of report you receive depends on the audit category:
+
+| Report Type | Based on |
+|---|---|
+| **Penetration Test Report** | A hands-on audit of a specific target |
+| **Vulnerability Assessment Report** | An automated scan across your systems |
+| **Attack Surface Assessment Report** | Ongoing monitoring of your exposed assets |
+
+## Finding Your Reports
+
+All your reports are listed on the **Reports** page.
+
+<Frame>
+  <img src="/images/audit-reports-list.png" alt="Rifteo Audit Reports list" noZoom />
+</Frame>
+
+For each report, you'll see:
+
+- **Audit ID** and **Audit Name** — to identify which audit the report belongs to
+- **Primary Asset** — the main target the report relates to
+- **Generated At** — when the report was created
+- **Expires At** — the date after which the report will no longer be available for download
+- **Status** — whether the report is currently `Available`
+
+<Tip>
+To download a report, click the small **report icon** next to it. The arrow (`>`) next to it instead takes you to the full audit page.
+</Tip>
+
+<Note>
+Reports have an expiration date. Make sure to download the reports you need before they expire.
+</Note>
+
+## Generation Flow
+
+<Steps>
+  <Step title="Audit marked Complete">
+    Once your audit team finishes their work and all findings are published, the audit status changes to **Completed**.
+  </Step>
+  <Step title="Report is generated">
+    Rifteo automatically compiles your audit data — findings, severity, recommendations — into a structured report.
+  </Step>
+  <Step title="PDF delivered">
+    The finished report is made available for download directly from your dashboard, with an expiration date.
+  </Step>
+</Steps>
+
+## Audit Overview
+
+Each audit has its own page with several tabs:
+
+**Overview · Related · Target · Rules of Engagement · Documents · Summaries · Findings & Analysis · Playbook · Thread**
+
+This page focuses on the **Overview** tab, which gives you a live summary of your results:
+
+<Frame>
+  <img src="/images/audit-overview-report.png" alt="Rifteo audit overview with security grade and findings summary" noZoom />
+</Frame>
+
+## What's Inside a Report
+
+Every report follows a consistent structure, so you always know where to find what you need:
+
+- **Cover Page** — audit name, dates, and scope summary
+- **Executive Summary** — a plain-English overview of your overall security posture, written for non-technical stakeholders
+- **Findings by Severity** — every finding, grouped from Critical down to Info
+- **Recommendations** — practical next steps for each finding, to guide your remediation priorities
+
+## Charts
+
+To help you quickly grasp the overall picture, reports include visual summaries:
+
+- **Severity distribution ring** — a breakdown of how many findings fall into each severity level
+- **Criticality breakdown** — a visual view of where your biggest risks are concentrated
+
+## ASM Reports — How They Differ
+
+Attack Surface Assessment reports follow the same overall structure, with a few key differences:
+
+| | Pentest / Vulnerability Report | ASM Report |
+|---|---|---|
+| **Scope** | Based on targets you declared | Based on continuously discovered assets |
+| **Findings** | Tied to specific tested targets | Tied to your evolving external attack surface |
+| **Frequency** | One report per audit | Can reflect ongoing/recurring scan results |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="How long is my report available before it expires?">
+    Check the **Expires At** column on the Reports page — this date varies per report, so make sure to download reports you need before they expire.
+  </Accordion>
+  <Accordion title="When will my report be available?">
+    Your report is generated automatically once your audit is marked **Completed**, and can be downloaded right away from the Reports page.
+  </Accordion>
+  <Accordion title="What does my Security Grade mean?">
+    It's an overall letter grade summarizing your security posture for that specific audit, based on the findings discovered.
+  </Accordion>
+  <Accordion title="Does an ASM report look the same as a Pentest report?">
+    The overall structure is similar, but ASM reports focus on continuously discovered assets rather than a fixed set of declared targets — see the comparison table above.
+  </Accordion>
+  <Accordion title="Who can access reports — Admins or Members too?">
+    Both Organisation Admins and Organisation Members can view and download reports.
+  </Accordion>
+</AccordionGroup>
