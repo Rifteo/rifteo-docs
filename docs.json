@@ -31,7 +31,7 @@
       },
       {
         "group": "Attack Surface Management",
-        "pages": ["what-is-asm", "activating-scans", "scheduling-results"]
+        "pages": ["what-is-asm", "scan-variants", "scheduling-results"]
       },
       {
         "group": "Teo AI",

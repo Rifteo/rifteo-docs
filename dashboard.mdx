@@ -1,6 +1,51 @@
-﻿---
-title: "Dashboard"
-description: "Documentation for Dashboard"
----
+﻿## Client Portal Overview
 
-# ASM Reports
+Your dashboard greets you with a summary of recent activity and key metrics, along with quick access to your audits, attack surface, and security events over time.
+
+<Frame>
+  <img src="/images/client-dashboard-overview.png" alt="Rifteo client dashboard overview" noZoom />
+</Frame>
+
+## Key Cards
+
+At the top of your dashboard, key cards summarize your current security posture:
+
+| Card | What it shows |
+|---|---|
+| **Registered Assets** | Total number of assets in your inventory |
+| **Audit Groups** | Number of audit groups |
+| **Total Audits** | Total number of audits run |
+| **Discovered Findings** | Total findings discovered across all audits |
+| **Security Grade** | An overall letter grade summarizing your security posture |
+
+Below the cards, you can switch between three views:
+
+- **Overview** — a Security Events Timeline showing findings, remediations, and audits over time
+- **Audit Calendar** — scheduled and ongoing audits
+- **Attack Surface** — your monitored attack surface
+
+<Tip>
+On the Overview tab, use the **All / Daily / Evolution** toggle and the date range filter to adjust how the timeline is displayed.
+</Tip>
+
+## Learn More
+
+This page covers the dashboard itself. For related topics:
+
+- **Notifications** (bell icon, in-app & email preferences) — see [Notifications](/notifications)
+- **Data privacy between organisations** — see [How Audits & Scope Work](/how-audits-and-scope-work#keeping-your-data-private)
+- **What Organisation Admins vs Members can do** — see [Your Role](/your-role)
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Why don't I see any data on my dashboard?">
+    If you haven't run any audits yet, your cards and charts will show zero values until your first audit is underway.
+  </Accordion>
+  <Accordion title="What does my Security Grade mean?">
+    It's an overall letter grade summarizing your security posture, based on the findings discovered across your audits.
+  </Accordion>
+  <Accordion title="Is the dashboard different for Organisation Admins vs Members?">
+    Both roles see the same dashboard overview. For a full breakdown of what each role can do, see [Your Role](/your-role).
+  </Accordion>
+</AccordionGroup>

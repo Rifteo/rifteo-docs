@@ -1,6 +1,45 @@
 ﻿---
-title: "Scheduling Results"
-description: "Documentation for Scheduling Results"
+title: "Scheduling & Results"
+description: "One-shot vs recurring ASM scans, the no-overlap guard, and how to read your scan results."
 ---
 
-# Scheduling & Results
+Not sure what ASM is yet? See [What is Attack Surface Management?](/what-is-asm) or [Scan Variants](/scan-variants) first.
+
+## Scheduling
+
+ASM scans can run in two ways:
+
+- **One-shot** — runs once, on demand. Good for a single point-in-time check.
+- **Recurring** — runs automatically on a set interval, so exposure is monitored continuously without you having to relaunch it manually.
+
+<Note>
+There's a no-overlap guard on recurring scans: if a scan is still running when the next one is due to start, the next run is held until the current one finishes. This prevents two scans from running against the same client at once.
+</Note>
+
+## Viewing Results
+
+<Frame>
+  <img src="/images/asm-results.png" alt="Rifteo ASM results view" />
+</Frame>
+
+Once a scan completes (or while a recurring scan builds up history), you'll see:
+
+- **Scan history** — a list of past runs, so you can track how exposure has changed over time.
+- **Severity graph** — a visual breakdown of findings by severity, to help you spot trends at a glance.
+- **Discovered assets** — the full list of assets ASM has found for this client, updated as new ones are discovered.
+
+<Steps>
+  <Step title="Open your ASM section">
+    Go back to your **ASM** page.
+  </Step>
+  <Step title="Select a scan run">
+    Choose a run from the scan history to see its details.
+  </Step>
+  <Step title="Review findings">
+    Check the severity graph for an overview, then drill into discovered assets for specifics.
+  </Step>
+</Steps>
+
+<Note>
+Not sure about a finding or a discovered asset? Reach out to [support](/contact-support).
+</Note>
