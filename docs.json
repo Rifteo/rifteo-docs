@@ -13,46 +13,95 @@
     "dark": "/logo/dark.svg"
   },
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": ["welcome", "your-role", "glossary"]
-      },
-      {
-        "group": "Running an Audit",
-        "pages": [
-          "starting-an-audit",
-          "audit-creation-scope",
-          "results",
-          "findings-dashboard", 
-          "asset-inventory"
-          
+        "language": "en",
+        "default": true,
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["welcome", "your-role", "glossary"]
+          },
+          {
+            "group": "Running an Audit",
+            "pages": [
+              "starting-an-audit",
+              "audit-creation-scope",
+              "results",
+              "findings-dashboard",
+              "asset-inventory"
+            ]
+          },
+          {
+            "group": "Attack Surface Management",
+            "pages": ["what-is-asm", "scan-variants", "scheduling-results"]
+          },
+          {
+            "group": "Teo AI",
+            "pages": ["teo-recommendations"]
+          },
+          {
+            "group": "Reports",
+            "pages": ["generating-reports", "asm-reports"]
+          },
+          {
+            "group": "Your Account",
+            "pages": [
+              "dashboard",
+              "notifications",
+              "team-management",
+              "contact-support"
+            ]
+          },
+          {
+            "group": "What's New",
+            "pages": ["changelog"]
+          }
         ]
       },
       {
-        "group": "Attack Surface Management",
-        "pages": ["what-is-asm", "scan-variants", "scheduling-results"]
-      },
-      {
-        "group": "Teo AI",
-        "pages": ["teo-recommendations"]
-      },
-      {
-        "group": "Reports",
-        "pages": ["generating-reports", "asm-reports"]
-      },
-      {
-        "group": "Your Account",
-        "pages": [
-          "dashboard",
-          "notifications",
-          "team-management",
-          "contact-support"
+        "language": "fr",
+        "groups": [
+          {
+            "group": "Premiers pas",
+            "pages": ["fr/welcome", "fr/your-role", "fr/glossary"]
+          },
+          {
+            "group": "Réaliser un audit",
+            "pages": [
+              "fr/starting-an-audit",
+              "fr/audit-creation-scope",
+              "fr/results",
+              "fr/findings-dashboard",
+              "fr/asset-inventory"
+            ]
+          },
+          {
+            "group": "Attack Surface Management",
+            "pages": ["fr/what-is-asm", "fr/scan-variants", "fr/scheduling-results"]
+          },
+          {
+            "group": "Teo AI",
+            "pages": ["fr/teo-recommendations"]
+          },
+          {
+            "group": "Rapports",
+            "pages": ["fr/generating-reports", "fr/asm-reports"]
+          },
+          {
+            "group": "Votre compte",
+            "pages": [
+              "fr/dashboard",
+              "fr/notifications",
+              "fr/team-management",
+              "fr/contact-support"
+            ]
+          },
+          {
+            "group": "Nouveautés",
+            "pages": ["fr/changelog"]
+          }
         ]
-      },
-      {
-        "group": "What's New",
-        "pages": ["changelog"]
       }
     ]
   },

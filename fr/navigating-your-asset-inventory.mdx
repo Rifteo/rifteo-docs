@@ -1,0 +1,65 @@
+---
+title: "Parcourir votre inventaire d'actifs"
+description: "Comment parcourir vos actifs surveillés, comprendre les actifs déclarés et découverts, et savoir qui peut y accéder."
+---
+
+La page **Actifs surveillés** liste chaque système associé à votre organisation : ceux que vous avez déclarés et ceux que l'équipe d'audit a découverts en cours de route.
+
+## Votre inventaire d'actifs
+
+Depuis la page **Actifs**, vous pouvez parcourir, rechercher et filtrer tous vos actifs.
+
+<Frame>
+  <img src="/images/asset-inventory-overview.png" alt="Page des actifs surveillés de Rifteo" noZoom />
+</Frame>
+
+Vous pouvez filtrer par :
+
+- **Type d'actif** : par exemple API ou web
+- **Découverts uniquement / non découverts uniquement** : pour isoler les actifs trouvés par l'équipe d'audit ou ceux que vous avez déclarés
+- **Environnement** : par exemple production
+- **Créé le** : par date
+
+## Déclarés vs découverts
+
+Les actifs de votre inventaire appartiennent à deux catégories :
+
+- **Déclarés** : actifs que vous avez fournis lors de la définition du périmètre d'audit (voir [Fonctionnement des audits et du périmètre](/fr/audit-creation-scope)).
+- **Découverts** : nouveaux actifs trouvés par l'équipe d'audit pendant les tests et qui ne faisaient pas partie du périmètre initial, comme un sous-domaine oublié ou un environnement de staging exposé.
+
+Utilisez le filtre **Découverts uniquement** pour voir rapidement tout ce que l'équipe d'audit a trouvé et que vous n'aviez pas déclaré.
+
+## Créer un actif
+
+Cliquez sur **Créer un actif** pour ajouter un nouvel actif à votre inventaire.
+
+<Frame>
+  <img src="/images/create-asset-form.png" alt="Formulaire de création d'actif Rifteo" noZoom />
+</Frame>
+
+**Détails de base :**
+- **Type** : par exemple web ou API
+- **Nom**
+- **Environnement** : développement, production, préproduction ou staging
+- **Endpoint**
+- **Port**
+- **Description**
+- **Fonctionnalités principales** : liste des fonctionnalités principales de l'actif pour aider à cadrer sa complexité lors de futurs audits
+
+**Paramètres avancés** (facultatif) :
+- **Relations avec d'autres actifs** : relier cet actif à d'autres actifs associés
+- **Comptes de test** : fournir des comptes de test avec les rôles appropriés ; ils peuvent être modifiés plus tard
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Pourquoi vois-je des actifs que je n'ai jamais déclarés ?">
+    Ce sont probablement des actifs **découverts** : des systèmes trouvés par l'équipe d'audit pendant les tests. Utilisez le filtre **Découverts uniquement** pour les voir tous en une fois.
+  </Accordion>
+  <Accordion title="Puis-je ajouter des actifs moi-même ?">
+    Oui, avec le bouton **Créer un actif** sur la page Actifs.
+  </Accordion>
+  <Accordion title="Qui peut consulter l'inventaire d'actifs ?">
+    Les Administrateurs et les Membres d'organisation peuvent le consulter.
+  </Accordion>
+</AccordionGroup>

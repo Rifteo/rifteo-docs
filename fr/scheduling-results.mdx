@@ -1,0 +1,45 @@
+---
+title: "Planification et résultats"
+description: "Scans ASM ponctuels ou récurrents, protection contre le chevauchement et lecture des résultats."
+---
+
+Vous ne savez pas encore ce qu'est l'ASM ? Consultez d'abord [Qu'est-ce que la gestion de surface d'attaque ?](/fr/what-is-asm) ou [Variantes de scan](/fr/scan-variants).
+
+## Planification
+
+Les scans ASM peuvent fonctionner de deux façons :
+
+- **One-shot** : s'exécute une seule fois, à la demande. Utile pour un contrôle ponctuel.
+- **Recurring** : s'exécute automatiquement à intervalle défini, pour surveiller l'exposition en continu sans relancer manuellement le scan.
+
+<Note>
+Une protection anti-chevauchement existe pour les scans récurrents : si un scan est encore en cours lorsque le suivant doit démarrer, le prochain lancement attend la fin du scan actuel. Cela évite deux scans simultanés sur le même client.
+</Note>
+
+## Consulter les résultats
+
+<Frame>
+  <img src="/images/asm-results.png" alt="Vue des résultats ASM Rifteo" />
+</Frame>
+
+Une fois un scan terminé, ou pendant qu'un scan récurrent construit son historique, vous voyez :
+
+- **Historique des scans** : liste des exécutions passées pour suivre l'évolution de l'exposition.
+- **Graphique de sévérité** : vue visuelle des constats par sévérité pour repérer les tendances rapidement.
+- **Actifs découverts** : liste complète des actifs trouvés par l'ASM, mise à jour à chaque nouvelle découverte.
+
+<Steps>
+  <Step title="Ouvrir la section ASM">
+    Retournez sur votre page **ASM**.
+  </Step>
+  <Step title="Sélectionner une exécution">
+    Choisissez une exécution dans l'historique des scans pour voir ses détails.
+  </Step>
+  <Step title="Examiner les constats">
+    Consultez le graphique de sévérité pour une vue d'ensemble, puis explorez les actifs découverts pour les détails.
+  </Step>
+</Steps>
+
+<Note>
+Vous avez un doute sur un constat ou un actif découvert ? Contactez le [support](/fr/contact-support).
+</Note>

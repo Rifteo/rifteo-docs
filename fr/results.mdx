@@ -1,0 +1,68 @@
+---
+title: "Comprendre vos résultats d'audit"
+description: "Ce qu'est un audit, comment suivre sa progression et ce que vous recevez une fois terminé."
+---
+
+## Qu'est-ce qu'un audit ?
+
+Un audit est une évaluation structurée de la sécurité des systèmes de votre organisation. Il sert à trouver les faiblesses avant qu'elles puissent être utilisées contre vous. Au lieu de deviner si vos défenses sont solides, un audit vous donne une vision claire, fondée sur des preuves, de votre situation.
+
+Pendant un audit, une équipe sécurité examine vos systèmes avec un mélange de scans automatisés et de tests manuels, selon le type d'audit demandé. Elle recherche des logiciels obsolètes, des mauvaises configurations, des systèmes exposés et d'autres faiblesses exploitables. Tout ce qui est trouvé est documenté, classé par gravité et livré dans un format clair et actionnable.
+
+Vous n'avez pas besoin de connaissances sécurité pour comprendre vos résultats. Rifteo transforme les constats techniques en langage simple afin que les Administrateurs et les Membres d'organisation puissent agir.
+
+## Suivi du statut d'audit
+
+Chaque audit passe par plusieurs étapes. Vous pouvez consulter l'étape actuelle à tout moment depuis votre tableau de bord.
+
+```mermaid
+flowchart LR
+    A[Planifié] --> B[En cours]
+    B --> C[En revue]
+    C --> D[Terminé]
+```
+
+| Statut | Signification |
+|--------|---------------|
+| **Planifié** | L'audit est planifié et cadré, mais les tests n'ont pas encore commencé. |
+| **En cours** | Les tests sont en cours. De nouveaux constats peuvent apparaître sur votre tableau de bord au fil des découvertes. |
+| **En revue** | Les tests sont terminés. L'équipe valide les constats, retire les faux positifs et prépare votre rapport final. |
+| **Terminé** | L'audit est terminé. Votre rapport complet, vos constats et les actifs découverts sont disponibles dans le tableau de bord. |
+
+## Ce que vous recevez
+
+Lorsqu'un audit atteint le statut **Terminé**, vous avez accès à :
+
+- **Constats** : la liste de tous les problèmes découverts, chacun avec un niveau de sévérité (critique, élevée, moyenne, faible ou information) et une explication claire de sa signification et de sa correction.
+- **Rapports** : un document consolidé qui résume l'audit, adapté au partage avec des parties prenantes ou à la conservation pour la conformité.
+- **Actifs découverts** : une vue mise à jour de votre inventaire d'actifs, incluant les systèmes ou sous-domaines trouvés par l'équipe et dont vous n'aviez peut-être pas connaissance.
+
+## Catégories d'audit
+
+Rifteo prend en charge plusieurs types d'audit selon ce que vous voulez évaluer.
+
+| Catégorie | Ce que cela couvre | Idéal pour |
+|-----------|--------------------|------------|
+| **Test d'intrusion** | Attaque simulée et manuelle contre un système ou une application spécifique, menée par des professionnels de la sécurité pour trouver des faiblesses exploitables. | Tester en profondeur une application, un produit ou un système avant un lancement ou une échéance de conformité. |
+| **Évaluation de vulnérabilités** | Scan automatisé qui identifie les vulnérabilités connues dans vos systèmes, sans tenter de les exploiter activement. | Obtenir un contrôle large et régulier de votre posture de sécurité sans test manuel complet. |
+| **Surface d'attaque** | Découverte et surveillance continues de tous vos actifs exposés à l'extérieur : sites web, serveurs, sous-domaines. | Garder une visibilité continue sur ce qui est exposé, plutôt qu'une photo ponctuelle. |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Combien de temps dure un audit ?">
+    Cela dépend de la catégorie et du périmètre. Une évaluation de vulnérabilités est généralement la plus rapide, tandis qu'un test d'intrusion peut prendre plus de temps à cause des tests manuels. Votre planning précis vous est communiqué lors de la planification.
+  </Accordion>
+  <Accordion title="Serai-je notifié quand le statut de mon audit change ?">
+    Oui. Les Administrateurs et Membres d'organisation ayant accès au tableau de bord voient les mises à jour en temps réel, et les notifications peuvent être configurées dans les paramètres du compte.
+  </Accordion>
+  <Accordion title="Que se passe-t-il si un constat critique est découvert pendant l'audit ?">
+    Les constats critiques sont généralement signalés dès qu'ils sont validés, même avant que l'audit soit terminé. Vous pouvez ainsi agir sur les problèmes urgents sans attendre le rapport final.
+  </Accordion>
+  <Accordion title="Puis-je demander un nouveau test après correction ?">
+    Oui, un nouveau test est disponible pour confirmer qu'un constat a bien été résolu. Contactez le support pour l'organiser.
+  </Accordion>
+  <Accordion title="Qui peut voir les résultats d'audit : Admins ou Membres aussi ?">
+    Les deux rôles peuvent consulter les résultats, les constats et les rapports. Seuls les Administrateurs d'organisation peuvent gérer les paramètres de compte liés à la planification et aux accès équipe.
+  </Accordion>
+</AccordionGroup>
