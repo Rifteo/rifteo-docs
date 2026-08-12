@@ -1,0 +1,192 @@
+---
+title: "Démarrer un audit"
+description: "Comment lancer votre premier audit dans Rifteo."
+---
+
+Rifteo propose deux façons de créer un audit. Choisissez celle qui vous convient :
+
+<Tabs>
+  <Tab title="Démarrer un audit (recommandé pour les nouveaux clients)">
+    Vous guide dans toutes les étapes, y compris la cible et le périmètre, en une seule fois afin que rien ne reste incomplet. C'est le meilleur choix pour un premier audit avec Rifteo, car il vous aide à comprendre la plateforme au fil du parcours.
+  </Tab>
+  <Tab title="Nouvel audit (pour les clients existants)">
+    Formulaire plus rapide sur une seule page. Il convient si vous avez déjà travaillé avec Rifteo. Notez que les champs comme le périmètre et les actifs restent vides jusqu'à ce que vous les complétiez plus tard.
+  </Tab>
+</Tabs>
+
+<Frame>
+  <img src="/images/audit-entry-points.png" alt="Où trouver Démarrer un audit et Nouvel audit dans Rifteo" />
+</Frame>
+
+<Tabs>
+  <Tab title="Démarrer un audit">
+
+## Étape 1 — Premiers pas
+
+<Steps>
+  <Step title="Cliquer sur Démarrer un audit">
+    Depuis votre tableau de bord, cliquez sur **Start an Audit** pour ouvrir l'assistant de configuration.
+  </Step>
+  <Step title="Donner un nom à l'audit">
+    Par exemple : "Q4 Web App Security Audit".
+  </Step>
+  <Step title="Choisir le type d'audit">
+    - **Test d'intrusion** : des experts tentent activement de s'introduire dans le système.
+    - **Évaluation de vulnérabilités** : scan automatisé, sans exploitation active.
+  </Step>
+  <Step title="Choisir la politique de divulgation">
+    Niveau d'accès donné à l'équipe d'audit :
+    - **Boîte noire** : aucune information préalable.
+    - **Boîte grise** : accès partiel. *Choix le plus courant.*
+    - **Boîte blanche** : accès complet (code source, identifiants).
+  </Step>
+  <Step title="Choisir le type de cible">
+    - **Application web** : site web ou plateforme.
+    - **API** : système qui connecte des applications ou services en arrière-plan.
+    - **Mobile (iOS/Android)**
+    - **Infrastructure cloud** : hébergée sur AWS, Azure, Google Cloud, etc.
+    - **Infrastructure sur site** : hébergée sur vos propres serveurs.
+  </Step>
+  <Step title="Définir la date d'audit">
+    Sélectionnez la période pendant laquelle l'audit aura lieu.
+  </Step>
+  <Step title="Définir la fenêtre de test">
+    Précisez les heures pendant lesquelles les tests actifs sont autorisés.
+  </Step>
+  <Step title="Ajouter les contacts d'urgence">
+    - **Problèmes techniques** : personne joignable si l'équipe d'audit rencontre un problème technique.
+    - **Problèmes de sécurité** : personne à notifier immédiatement si une vulnérabilité critique est trouvée.
+  </Step>
+</Steps>
+
+## Étape 2 — Cible
+
+Définissez les actifs à tester.
+
+<Steps>
+  <Step title="Ajouter un actif">
+    Créez un nouvel actif ou sélectionnez un actif existant dans votre compte.
+  </Step>
+  <Step title="Compléter les détails de l'actif">
+    - **Type** : par exemple Web.
+    - **Nom** : nom descriptif de cet actif.
+    - **Environnement** : Production, Préproduction, Staging ou Développement.
+    - **Endpoint** : URL ou adresse à tester.
+    - **Port**
+    - **Description** : court résumé du rôle de cet actif.
+    - **Fonctionnalités principales** : principales fonctionnalités, pour aider à cadrer l'audit.
+  </Step>
+  <Step title="Compléter les paramètres avancés (facultatif)">
+    - **URL du code source** : si vous voulez que l'équipe d'audit examine le code.
+    - **Niveau de complexité** : basique, normal ou complexe.
+    - **Criticité** : importance de l'actif, de faible à critique.
+    - **Données traitées ou manipulées** : types de données stockées ou traitées (données personnelles, données de paiement, données médicales, etc.).
+    - **Pays d'hébergement** : pays où l'actif est hébergé.
+    - **Hébergement par un tiers** : indique si l'actif est hébergé par un prestataire externe.
+    - **Système d'exploitation** : par exemple Linux ou Windows.
+  </Step>
+  <Step title="Ajouter des comptes de test (facultatif)">
+    Fournissez des comptes de test avec les rôles appropriés pour cet actif, avec **Rôle**, **Type d'authentification** (Basic, Bearer, OAuth, clé API ou autre) et **Détails**. Vous pourrez les modifier plus tard.
+  </Step>
+  <Step title="Définir les exigences de sécurité">
+    Notez chaque élément de faible à élevé pour aider à prioriser :
+    - **Confidentialité** : sensibilité des données.
+    - **Intégrité** : importance de l'intégrité des données.
+    - **Disponibilité** : importance de la disponibilité de l'actif.
+    - **Traçabilité** : importance du suivi des actions.
+  </Step>
+  <Step title="Ajouter des Documents (facultatif)">
+    Téléversez toute documentation pertinente pour cet actif.
+  </Step>
+</Steps>
+
+## Étape 3 — Périmètre
+
+Définissez les règles d'engagement pour que les tests restent sûrs et conformes.
+
+<Steps>
+  <Step title="Sélectionner vos protections actives">
+    Cochez les mesures de sécurité déjà en place : **WAF** (pare-feu applicatif web), **protection DDoS**, **IPS/IDS**, **limitation de débit**, **contrôles de sécurité du fournisseur cloud** ou **autre**.
+  </Step>
+  <Step title="Sélectionner les actions interdites">
+    Choisissez ce qui est strictement interdit pendant les tests : intrusion physique, phishing, ingénierie sociale, déni de service, élévation de privilèges ou types précis d'exploitation. Laissez décoché ce que vous acceptez d'autoriser.
+  </Step>
+  <Step title="Sélectionner les événements redoutés">
+    Indiquez ce qui vous inquiète le plus : fuite de données, indisponibilité du service, accès non autorisé, ransomware, transactions frauduleuses ou autre.
+  </Step>
+  <Step title="Ajouter des informations complémentaires (facultatif)">
+    Ajoutez toute information utile à l'équipe d'audit.
+  </Step>
+</Steps>
+
+## Étape 4 — Revue
+
+Vérifiez tout avant de confirmer :
+
+<Steps>
+  <Step title="Relire les informations générales, la cible et le périmètre">
+    Utilisez **Modifier** à côté d'une section pour la modifier.
+  </Step>
+  <Step title="Confirmer les trois cases">
+    - **NDA signé** : accord de confidentialité couvrant l'audit.
+    - **Autorisation de test d'intrusion signée** : autorisation formelle donnée à Rifteo pour tester les actifs définis.
+    - **Sauvegardes vérifiées et à jour** : vérification des sauvegardes pour prévenir les pertes de données.
+  </Step>
+</Steps>
+
+## Étape 5 — Finalisation
+
+Votre audit est maintenant planifié. Un écran de confirmation s'affiche, et vous pouvez télécharger un résumé de votre configuration. Rifteo vous contactera bientôt pour la suite.
+
+  </Tab>
+  <Tab title="Nouvel audit">
+
+<Frame>
+  <img src="/images/new-audit-form.png" alt="Formulaire Create Audit de Rifteo" />
+</Frame>
+
+<Steps>
+  <Step title="Cliquer sur Nouvel audit">
+    Depuis la page **Audits**, cliquez sur **Nouvel audit**.
+  </Step>
+  <Step title="Compléter les informations d'audit">
+    - **Nom de l'audit** : nom descriptif de l'audit.
+    - **Description** : court résumé du périmètre.
+    - **Catégorie** : test d'intrusion ou évaluation de vulnérabilités.
+  </Step>
+  <Step title="Définir la planification">
+    - **Audit récurrent** : activez cette option pour planifier automatiquement plusieurs audits.
+    - **Période d'audit** : période de l'audit.
+    - **Fenêtre horaire** : heures pendant lesquelles les tests sont autorisés.
+  </Step>
+  <Step title="Définir les règles d'engagement">
+    - **Méthodologie d'audit** : boîte grise, boîte noire ou boîte blanche, selon le niveau d'accès donné aux testeurs.
+    - **Disponibilité des sauvegardes** : disponibilité d'une sauvegarde récente.
+    - **Événements redoutés** : menaces qui auraient le plus d'impact pour vous.
+    - **Tests interdits** : actions de test interdites.
+    - **Protections de sécurité** : protections déjà en place.
+    - **Fréquence d'alerte** : fréquence de notification souhaitée pendant les tests.
+    - **Contact technique** et **contact sécurité** : contacts pour les problèmes techniques ou constats critiques.
+  </Step>
+  <Step title="Définir les exigences de sécurité">
+    Notez chaque élément de faible à élevé pour aider à prioriser :
+    - **Confidentialité** : sensibilité des données.
+    - **Intégrité** : importance de l'intégrité des données.
+    - **Disponibilité** : importance de la disponibilité de l'actif.
+    - **Traçabilité** : importance du suivi des actions.
+  </Step>
+  <Step title="Créer l'audit">
+    Une fois soumis, l'audit est créé, mais les détails du périmètre et des actifs restent vides. Complétez-les depuis la page de l'audit lorsque vous êtes prêt.
+  </Step>
+</Steps>
+
+  </Tab>
+</Tabs>
+
+<Note>
+Vous hésitez sur un champ ? Contactez le [support](/fr/contact-support).
+</Note>
+
+## Et ensuite ?
+
+Votre audit passe par **Planifié → En cours → En revue → Terminé**. Voir [Comprendre vos résultats d'audit](/fr/results) pour plus de détails.

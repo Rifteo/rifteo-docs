@@ -1,0 +1,112 @@
+---
+title: "Comprendre vos rapports d'audit"
+description: "Ce que contiennent les rapports Rifteo, comment ils sont générés et comment les rapports ASM diffèrent des rapports d'audit."
+---
+
+Une fois votre audit terminé, Rifteo génère un rapport détaillé qui résume tout ce que l'équipe d'audit a trouvé. Cette page explique ce qu'il contient et où le trouver.
+
+## Types de rapport
+
+Le type de rapport reçu dépend de la catégorie d'audit :
+
+| Type de rapport | Basé sur |
+|---|---|
+| **Rapport de test d'intrusion** | Audit manuel d'une cible spécifique |
+| **Rapport d'évaluation de vulnérabilités** | Scan automatisé de vos systèmes |
+| **Rapport d'évaluation de surface d'attaque** | Surveillance continue de vos actifs exposés |
+
+## Trouver vos rapports
+
+Tous vos rapports sont listés sur la page **Rapports**.
+
+<Frame>
+  <img src="/images/audit-reports-list.png" alt="Liste des rapports d'audit Rifteo" noZoom />
+</Frame>
+
+Pour chaque rapport, vous voyez :
+
+- **ID d'audit** et **nom de l'audit** : pour identifier l'audit associé
+- **Actif principal** : cible principale liée au rapport
+- **Généré le** : date de création du rapport
+- **Expire le** : date après laquelle le rapport ne sera plus disponible au téléchargement
+- **Statut** : indique si le rapport est actuellement disponible
+
+<Tip>
+Pour télécharger un rapport, cliquez sur la petite **icône de rapport** à côté. La flèche (`>`) voisine ouvre la page complète de l'audit.
+</Tip>
+
+<Note>
+Les rapports ont une date d'expiration. Téléchargez les rapports dont vous avez besoin avant leur expiration.
+</Note>
+
+## Flux de génération
+
+<Steps>
+  <Step title="Audit marqué comme terminé">
+    Une fois le travail terminé et tous les constats publiés, le statut de l'audit passe à **Terminé**.
+  </Step>
+  <Step title="Rapport généré">
+    Rifteo compile automatiquement les données de l'audit : constats, sévérité et recommandations, dans un rapport structuré.
+  </Step>
+  <Step title="PDF livré">
+    Le rapport final est disponible au téléchargement directement depuis votre tableau de bord, avec une date d'expiration.
+  </Step>
+</Steps>
+
+## Vue d'ensemble d'un audit
+
+Chaque audit dispose de sa propre page avec plusieurs onglets :
+
+**Vue d'ensemble · Éléments liés · Cible · Règles d'engagement · Documents · Résumés · Constats et analyse · Playbook · Fil**
+
+Cette page se concentre sur l'onglet **Vue d'ensemble**, qui donne un résumé en direct de vos résultats :
+
+<Frame>
+  <img src="/images/audit-overview-report.png" alt="Vue d'ensemble d'audit Rifteo avec note de sécurité et résumé des constats" noZoom />
+</Frame>
+
+## Ce qu'un rapport contient
+
+Chaque rapport suit une structure cohérente afin que vous sachiez toujours où trouver l'information :
+
+- **Page de couverture** : nom de l'audit, dates et résumé du périmètre
+- **Résumé exécutif** : vue d'ensemble en langage clair de votre posture de sécurité, pensée pour des parties prenantes non techniques
+- **Constats par sévérité** : tous les constats, groupés de critique à information
+- **Recommandations** : prochaines étapes pratiques pour chaque constat afin de guider vos priorités de remédiation
+
+## Graphiques
+
+Pour comprendre rapidement la situation globale, les rapports incluent des synthèses visuelles :
+
+- **Anneau de répartition par sévérité** : répartition du nombre de constats par niveau de sévérité
+- **Répartition par criticité** : vue visuelle des zones où vos plus grands risques sont concentrés
+
+## Rapports ASM : différences
+
+Les rapports d'évaluation de surface d'attaque suivent la même structure générale, avec quelques différences clés :
+
+| | Rapport de test d'intrusion / vulnérabilités | Rapport ASM |
+|---|---|---|
+| **Périmètre** | Basé sur les cibles que vous avez déclarées | Basé sur des actifs découverts en continu |
+| **Constats** | Liés à des cibles testées précises | Liés à l'évolution de votre surface d'attaque externe |
+| **Fréquence** | Un rapport par audit | Peut refléter des scans continus ou récurrents |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Combien de temps mon rapport reste-t-il disponible avant expiration ?">
+    Vérifiez la colonne **Expire le** sur la page Rapports. La date varie selon le rapport, donc téléchargez ceux dont vous avez besoin avant expiration.
+  </Accordion>
+  <Accordion title="Quand mon rapport sera-t-il disponible ?">
+    Votre rapport est généré automatiquement lorsque l'audit passe à **Terminé**. Il peut ensuite être téléchargé depuis la page Rapports.
+  </Accordion>
+  <Accordion title="Que signifie ma note de sécurité ?">
+    C'est une note globale qui résume votre posture de sécurité pour cet audit précis, à partir des constats découverts.
+  </Accordion>
+  <Accordion title="Un rapport ASM ressemble-t-il à un rapport de test d'intrusion ?">
+    La structure générale est similaire, mais les rapports ASM se concentrent sur les actifs découverts en continu plutôt que sur un ensemble fixe de cibles déclarées.
+  </Accordion>
+  <Accordion title="Qui peut accéder aux rapports : Admins ou Membres aussi ?">
+    Les Administrateurs et les Membres d'organisation peuvent consulter et télécharger les rapports.
+  </Accordion>
+</AccordionGroup>
